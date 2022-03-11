@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        input{
+            width: 200px;
+            border-radius: 10px;
+            outline: 0;
+            height: 30px;
+            
+            border: 1px solid blue;
+            text-align: center;
+        }
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 25%;
+        height: 40%;
+        flex-direction: column;
+        border-radius: 20px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <div class="container">
+      <input type="text" id="rollnum"  placeholder="Roll number" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="fetchValues()">Submit</button>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+  <script src="./post.js"></script>
+  <script src="./load.js"></script>
+</html>
