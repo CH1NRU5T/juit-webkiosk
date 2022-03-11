@@ -1,8 +1,18 @@
 var rollNumber;
 var password;
 function fetchValues() {
+  document.querySelector(".error").style.display = `none`;
   rollNumber = document.querySelector("#rollnum").value;
   password = document.querySelector("#password").value;
+
+  if(!rollNumber){
+    document.querySelector('.error').textContent = "Roll number field cannot be empty";
+    document.querySelector('.error').style.display = "block";
+  }
+  if(!password){
+    document.querySelector('.error').textContent = "Password field cannot be empty";
+    document.querySelector('.error').style.display = "block";
+  }
   postData("https://juit-webkiosk.herokuapp.com/api/attendance", {
     enrollmentNumber: rollNumber,
     password: password,
@@ -13,6 +23,9 @@ function fetchValues() {
           return d;
         })
       );
+    } else {
+      document.querySelector(".error").textContent = `Error`;
+      document.querySelector(".error").style.display = `block`;
     }
   });
 }
