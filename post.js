@@ -13,3 +13,4 @@ async function postData(url = "", data = {}) {
   });
   return { status: response.status, json: response.json() };
 }
+// window.location.href = "./homepage.html"

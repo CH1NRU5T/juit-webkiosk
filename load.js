@@ -4,6 +4,7 @@ function loadNewHtml(d) {
   d.then((f) => {
     f.forEach((element) => {
       body.innerHTML += `${element.subjectName} : ${element.overallAttendance}<br>`;
+      body.style.color = "#fff"
     });
   });
 }
